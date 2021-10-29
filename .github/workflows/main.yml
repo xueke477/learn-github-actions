@@ -1,0 +1,33 @@
+name: Email Myself on Push to the Master Branch
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  email-myself:
+    steps:
+    - name: 'Send mail'
+      uses: dawidd6/action-send-mail@v3
+      with:
+        # Required mail server address:
+        server_address: smtp.gmail.com
+        # Required mail server port:
+        server_port: 587
+        # Optional (recommended): mail server username:
+        username: ${{secrets.MAIL_USERNAME}}
+        # Optional (recommended) mail server password:
+        password: ${{secrets.MAIL_PASSWORD}}
+        # Required mail subject:
+        subject: Github Actions Push to Master
+        # Required recipients' addresses:
+        to: xueke.kent@gmail.com
+        # Required sender full name (address can be skipped):
+        from: Ke Xue
+        # Optional whether this connection use TLS (default is true if server_port is 465)
+        secure: true
+        # Optional plain body:
+        body: Hi, this is an email from the learn-github-actions repo!
+
