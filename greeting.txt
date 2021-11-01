@@ -1,2 +1,3 @@
 Hi there!
 Hello there too!
+This is a line to test git rebase.
