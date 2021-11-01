@@ -3,3 +3,5 @@ Hello world! I want to say something too.
 Another line by original repo.
 
 Fork repo added a line here.
+
+Source repo added a line to test git rebase on master and feature branches.
